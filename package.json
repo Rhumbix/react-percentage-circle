@@ -1,8 +1,8 @@
 {
   "name": "react-percentage-circle",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "React Percentage Circle",
-  "main": "lib/ReactPercentageCircle.js",
+  "main": "dist/react-percentage-circle.js",
   "author": "kenneth.jiang@gmail.com",
   "homepage": "https://github.com/kennethjiang/react-percentage-circle",
   "licenses": "MIT",
