@@ -1,61 +1,121 @@
-# React Percentage Circle
+# rc-progress
+---
 
-__COMPONENT DESCRIPTION GOES HERE__
+progress ui component for react
+
+[![NPM version][npm-image]][npm-url]
+[![SPM version](http://spmjs.io/badge/rc-progress)](http://spmjs.io/package/rc-progress)
+[![build status][travis-image]][travis-url]
+[![Test coverage][coveralls-image]][coveralls-url]
+[![gemnasium deps][gemnasium-image]][gemnasium-url]
+[![node version][node-image]][node-url]
+[![npm download][download-image]][download-url]
 
 
-## Demo & Examples
+[npm-image]: http://img.shields.io/npm/v/rc-progress.svg?style=flat-square
+[npm-url]: http://npmjs.org/package/rc-progress
+[travis-image]: https://img.shields.io/travis/react-component/progress.svg?style=flat-square
+[travis-url]: https://travis-ci.org/react-component/progress
+[coveralls-image]: https://img.shields.io/coveralls/react-component/progress.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/react-component/progress?branch=master
+[gemnasium-image]: http://img.shields.io/gemnasium/react-component/progress.svg?style=flat-square
+[gemnasium-url]: https://gemnasium.com/react-component/progress
+[node-image]: https://img.shields.io/badge/node.js-%3E=_0.10-green.svg?style=flat-square
+[node-url]: http://nodejs.org/download/
+[download-image]: https://img.shields.io/npm/dm/rc-progress.svg?style=flat-square
+[download-url]: https://npmjs.org/package/rc-progress
 
-Live demo: [KennethJiang.github.io/react-percentage-circle](http://KennethJiang.github.io/react-percentage-circle/)
+## Screenshots
 
-To build the examples locally, run:
+<img src="https://t.alipayobjects.com/images/T12p8gXjpgXXXXXXXX.gif" />
+
+
+## Feature
+
+* support ie9+,chrome,firefox,safari
+
+### Keyboard
+
+
+
+## install
+
+[![rc-progress](https://nodei.co/npm/rc-progress.png)](https://npmjs.org/package/rc-progress)
+
+## Usage
+
+```js
+var Line = require('rc-progress').Line;
+var Circle = require('rc-progress').Circle;
+var React = require('react');
+React.render(<div>
+    <Line percent=“10” strokeWidth="4" strokeColor=“#D3D3D3” />
+    <Circle percent=“10” strokeWidth="4" strokeColor=“#D3D3D3” />
+  </div>, container);
+```
+
+## API
+
+### props
+
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th style="width: 100px;">name</th>
+        <th style="width: 50px;">type</th>
+        <th style="width: 50px;">default</th>
+        <th>description</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>strokeWidth</td>
+          <td>Number</td>
+          <td>1</td>
+          <td>Width of the stroke. Unit is percentage of SVG canvas size.</td>
+        </tr>
+        <tr>
+          <td>strokeColor</td>
+          <td>String</td>
+          <td>#3FC7FA</td>
+          <td> Stroke color.</td>
+        </tr>
+        <tr>
+          <td>trailWidth</td>
+          <td>Number</td>
+          <td>1</td>
+          <td>Width of the trail stroke. Unit is percentage of SVG canvas size. Trail is always centered relative to actual progress path. If trailWidth are not defined, it same as strokeWidth.</td>
+        </tr>
+        <tr>
+          <td>trailColor</td>
+          <td>String</td>
+          <td>#D9D9D9</td>
+          <td> Color for lighter trail stroke underneath the actual progress path.</td>
+        </tr>
+    </tbody>
+</table>
+
+## Development
 
 ```
 npm install
 npm start
 ```
 
-Then open [`localhost:8000`](http://localhost:8000) in a browser.
+## Example
 
+http://localhost:8000/examples/
 
-## Installation
+online example: http://react-component.github.io/progress/
 
-The easiest way to use react-percentage-circle is to install it from NPM and include it in your own React build process (using [Browserify](http://browserify.org), [Webpack](http://webpack.github.io/), etc).
+## Test Case
 
-You can also use the standalone build by including `dist/react-percentage-circle.js` in your page. If you use this, make sure you have already included React, and it is available as a global variable.
+http://localhost:8000/tests/runner.html?coverage
 
-```
-npm install react-percentage-circle --save
-```
+## Coverage
 
-
-## Usage
-
-__EXPLAIN USAGE HERE__
-
-```
-var ReactPercentageCircle = require('react-percentage-circle');
-
-<ReactPercentageCircle>Example</ReactPercentageCircle>
-```
-
-### Properties
-
-* __DOCUMENT PROPERTIES HERE__
-
-### Notes
-
-__ADDITIONAL USAGE NOTES__
-
-
-## Development (`src`, `lib` and the build process)
-
-**NOTE:** The source code for the component is in `src`. A transpiled CommonJS version (generated with Babel) is available in `lib` for use with node.js, browserify and webpack. A UMD bundle is also built to `dist`, which can be included without the need for any build system.
-
-To build, watch and serve the examples (which will also watch the component source), run `npm start`. If you just want to watch changes to `src` and rebuild `lib`, run `npm run watch` (this is useful if you are working with `npm link`).
+http://localhost:8000/node_modules/rc-server/node_modules/node-jscover/lib/front-end/jscoverage.html?w=http://localhost:8000/tests/runner.html?coverage
 
 ## License
 
-__PUT LICENSE HERE__
-
-Copyright (c) 2016 Kenneth Jiang.
-
+rc-progress is released under the MIT license.
