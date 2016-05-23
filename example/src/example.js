@@ -30,7 +30,7 @@ var App = React.createClass({
         <h3>Circle Progress {this.state.percent}%</h3>
         <div style={circleContainerStyle}>
           <Circle percent={this.state.percent} strokeWidth="6" strokeColor={this.state.color}>
-              <Caption text={this.state.percent} x="50" y="50"/>
+              <Caption text={this.state.percent} x="50" y="50" textAnchor="middle" className='caption-text'/>
           </Circle>
         </div>
         <p>
