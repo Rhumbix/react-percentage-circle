@@ -12,9 +12,11 @@ const Caption = React.createClass({
   render() {
     let props = assign({}, this.props);
     const text = props.text || '';
+    const className = props.className;
     delete props.text;
+    delete props.className;
     return (
-      <text {...props} text-anchor='middle'>{text}</text>
+      <text {...props} props, { 'class': className }>{text}</text>
     );
   }
 });
