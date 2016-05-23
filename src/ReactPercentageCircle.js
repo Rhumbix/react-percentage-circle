@@ -16,7 +16,7 @@ const Caption = React.createClass({
     delete props.text;
     delete props.className;
     return (
-      <text {...props} props, className=className>{text}</text>
+      <text {...props} className={className}>{text}</text>
     );
   }
 });

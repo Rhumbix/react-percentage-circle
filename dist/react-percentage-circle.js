@@ -105,10 +105,12 @@ var Caption = React.createClass({
   render: function render() {
     var props = assign({}, this.props);
     var text = props.text || '';
+    var className = props.className;
     delete props.text;
+    delete props.className;
     return React.createElement(
       'text',
-      _extends({}, props, { 'text-anchor': 'middle' }),
+      _extends({}, props, { className: className }),
       text
     );
   }
