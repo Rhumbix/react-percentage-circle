@@ -1,5 +1,6 @@
 const React = require('react');
 const assign = require('object-assign');
+const createReactClass = require('create-react-class');
 
 const defaultProps = {
   strokeWidth: 1,
@@ -8,7 +9,7 @@ const defaultProps = {
   trailColor: '#D9D9D9',
 };
 
-const Caption = React.createClass({
+const Caption = createReactClass({
   render() {
     let props = assign({}, this.props);
     const text = props.text || '';
@@ -21,7 +22,7 @@ const Caption = React.createClass({
   }
 });
 
-const Circle = React.createClass({
+const Circle = createReactClass({
   render() {
     const props = assign({}, this.props);
     const strokeWidth = props.strokeWidth;
